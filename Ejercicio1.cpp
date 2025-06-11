@@ -2,17 +2,19 @@
 using namespace std;
 
 int main() {
-    int n, max, A[20];
-    cin >> n;
-    
-    for (int i = 0; i < n; i++){
-        cin >> A[i];
-    }
-    max = A[0];
+    int cantidad_numeros, numero_mayor, arreglo[20];
+        cout << "Ingrese la cantidad de elementos del arreglo: ";
 
-    for (int i = 0; i < n; i++) {
-        if (A[i] > max)
-            max = A[i];
+    cin >> cantidad_numeros;
+    
+    for (int i = 0; i < cantidad_numeros; i++){
+        cin >> arreglo[i];
     }
-    cout << "El mayor numero del arreglo es: " << max;
+    numero_mayor = arreglo[0];
+
+    for (int i = 0; i < cantidad_numeros; i++) {
+        if (arreglo[i] > numero_mayor)
+            numero_mayor = arreglo[i];
+    }
+    cout << "El mayor numero del arreglo es: " << numero_mayor;
 }
