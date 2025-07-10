@@ -10,6 +10,14 @@ int encontrarMenor(int arreglo[], int cantidad) {
     return menor;
 }
 
+float calcularPromedio(int arreglo[], int cantidad) {
+    int suma = 0;
+    for (int i = 0; i < cantidad; i++) {
+        suma += arreglo[i];
+    }
+    return (float)suma / cantidad;  
+}
+
 int main() {
     int cantidad_numeros, numero_mayor, numero_menor, arreglo[20];
 
@@ -30,6 +38,9 @@ int main() {
 
     numero_menor = encontrarMenor(arreglo, cantidad_numeros);
     cout << "El menor numero del arreglo es: " << numero_menor << endl;
+
+    float promedio = calcularPromedio(arreglo, cantidad_numeros);
+    cout << "El promedio de los elementos del arreglo es: " << promedio << endl;
 
     return 0;
 }
